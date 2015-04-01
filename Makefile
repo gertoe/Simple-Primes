@@ -13,4 +13,4 @@ prog: $(OBJ)
 	$(CC) $(CFLAGS) -o $(BIN) $(OBJ) $(LDFLAGS)
 
 clean:
-	rm $(BIN) $(OBJ)
+  rm $(BIN) $(OBJ)
