@@ -10,7 +10,7 @@ HDR = $(OBJ:%.o=%.h)
 BIN = prime
 
 prog: $(OBJ)
-  $(CC) $(CFLAGS) -o $(BIN) $(OBJ) $(LDFLAGS)
+	$(CC) $(CFLAGS) -o $(BIN) $(OBJ) $(LDFLAGS)
 
 clean:
-  rm $(BIN) $(OBJ)
+	rm $(BIN) $(OBJ)
