@@ -5,6 +5,8 @@
 #include "primetest.h"
 #include "primebench.h"
 
+/* #include "primeusage.h" //TODO: usage output, optionally outsourced*/
+
 char isNumber(char *input) {
     for (int i = 0; input[i] != '\0'; i++)
         if (isalpha(input[i]))
@@ -13,27 +15,11 @@ char isNumber(char *input) {
 }
 
 int main(int argc, char *argv[]) {
-  /*  char how_many[5],
-      start_num[20];
-      unsigned long x = 0;
-      unsigned int n;
-  // Benutzereingabe fuer Anzahl und Startwert
-  printf("Prime-Checker\n\n" \
-  "How many primes should be found?\n" \
-  "> ");
-  fgets(how_many, sizeof(how_many), stdin);
-  sscanf(how_many, "%d", &n);
-  printf("\n\nFrom which number?\n" \
-  "> ");
-  fgets(start_num, sizeof(start_num), stdin);
-  sscanf(start_num, "%ld", &x);
-  printf("\n\n\n");
-  */
 
-  unsigned long x = 0;
-  unsigned int  n = -1;
+  unsigned long x = 0;  // default start
+  unsigned int  n = -1; // default nums: "infinite" (with buffer overflow)
 
-  // OPTIONS
+  // OPTIONS TODO: fix faulty inputs, return usage
   int c;
   char *svalue = NULL;
   char *nvalue = NULL;
