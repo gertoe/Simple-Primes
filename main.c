@@ -5,7 +5,7 @@
 #include "primetest.h"
 #include "primebench.h"
 
-/* #include "primeusage.h" //TODO: usage output, optionally outsourced*/
+/* #include "primeusage.h" //TODO: usage output, optionally outsourced */
 
 char isNumber(char *input) {
     for (int i = 0; input[i] != '\0'; i++)
