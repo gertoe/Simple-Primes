@@ -9,7 +9,7 @@ sprimes [-bv|--benchmark --verbose] [--threads <t>] [-s <start>|--startnum <star
 sprimes -h | --help
 sprimes --version
 
-##Options:
+Options:
 -s <start>, --startnum <start> Start number [default: 0]
 -e <end>, --endnum <end>       End number [default: 18446744073709551615]
 -b, --benchmark                Benchmark prime confirmation
