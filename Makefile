@@ -4,10 +4,10 @@ CFLAGS  = -Wimplicit-function-declaration -DVERSION=\"$(VERSION)\"
 LDFLAGS = -lm
 
 OBJ = main.o primetest.o primebench.o
-SRC = $(OBJ:%.o=%.c) main.c
+SRC = $(OBJ:%.o=%.c) primes.c
 HDR = $(OBJ:%.o=%.h)
 
-BIN = prime
+BIN = sprimes
 
 prog: $(OBJ)
 	$(CC) $(CFLAGS) -o $(BIN) $(OBJ) $(LDFLAGS)
