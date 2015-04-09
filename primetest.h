@@ -3,8 +3,8 @@
 
 #include <stdio.h>
 
-void primes(unsigned long start_x, unsigned int n_nums);
-int primetest(unsigned long z);
+void primes(unsigned long long start_x, unsigned int n_nums, char verbose);
+int primetest(unsigned long long z);
 
 #endif // PRIMETEST_H
 

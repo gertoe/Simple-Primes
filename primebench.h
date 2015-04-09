@@ -5,7 +5,7 @@
 #include <time.h>
 
 long double  t_used(clock_t start, clock_t end);
-void primebench(unsigned long start_x, unsigned int n_nums);
+void primebench(unsigned long long start_x, unsigned int n_nums, char verbose);
 
 #endif
 
