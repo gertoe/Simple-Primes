@@ -3,7 +3,8 @@ Small program for determining primes with benchmarking functionality
 
 When this program will be finished it can be used as described below.
 
-## Usage:
+```
+Usage:
 sprimes [-bv|--benchmark --verbose] [--threads <t>] [-s <start>|--startnum <start> ] [-e <end>|--endnum <end>]
 sprimes -h | --help
 sprimes --version
@@ -16,6 +17,6 @@ sprimes --version
 --threads <t>                  Number of threads used to find primes [default: 1]
 --version                      Print version
 -h, --help                     Show this screen
-
+```
 Still w.i.p. !
 
