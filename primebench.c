@@ -1,10 +1,10 @@
 #include "primebench.h"
-#include "primetest.h"
+#include "primes.h"
 
 
 void primebench(unsigned long long start_x, unsigned int n_nums, char verbose) {
   clock_t start_clk = clock();
-  primes(start_x, n_nums, verbose);
+  find_primes(start_x, n_nums, verbose);
   clock_t end_clk = clock();
   printf("%Lf sec.", t_used(start_clk, end_clk));
 }

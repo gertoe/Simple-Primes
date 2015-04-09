@@ -29,23 +29,23 @@ const char help_message[] =
 "Simple Primes.\n"
 "\n"
 "Usage:\n"
-"  sprimes [-bv|--benchmark --verbose] [--threads <t>] [-s <start>|--startnum <start> ] [-e <end>|--endnum <end>]\n"
+"  sprimes [-bv] [--threads <t>] [-s <start>] [-e <end>]\n"
 "  sprimes -h | --help\n"
 "  sprimes --version\n"
 "\n"
 "Options:\n"
-"  -s <start>, --startnum <start> Start number [default: 0]\n"
-"  -e <end>, --endnum <end>       End number [default: 18446744073709551615]\n"
-"  -b, --benchmark                Benchmark prime confirmation\n"
-"  -v, --verbose                  Enable output of primes found\n"
-"  --threads <t>                  Number of threads used to find primes [default: 1]\n"
-"  --version                      Print version\n"
-"  -h, --help                     Show this screen\n"
+"  -s <start>, --startnum <start>  Start number [default: 0]\n"
+"  -e <end>, --endnum <end>        End number [default: 18446744073709551615]\n"
+"  -b, --benchmark                 Benchmark prime confirmation\n"
+"  -v, --verbose                   Enable output of primes found\n"
+"  --threads <t>                   Number of threads used to find primes [default: 1]\n"
+"  --version                       Print version\n"
+"  -h, --help                      Show this screen\n"
 "";
 
 const char usage_pattern[] =
 "Usage:\n"
-"  sprimes [-bv|--benchmark --verbose] [--threads <t>] [-s <start>|--startnum <start> ] [-e <end>|--endnum <end>]\n"
+"  sprimes [-bv] [--threads <t>] [-s <start>] [-e <end>]\n"
 "  sprimes -h | --help\n"
 "  sprimes --version";
 
@@ -299,7 +299,7 @@ int elems_to_args(Elements *elements, DocoptArgs *args, bool help,
 
 DocoptArgs docopt(int argc, char *argv[], bool help, const char *version) {
     DocoptArgs args = {
-        0, 0, 0, 0, (char*) "18446744073709551615", NULL, (char*) "1",
+        0, 0, 0, 0, (char*) "18446744073709551615", (char*) "0", (char*) "1",
         usage_pattern, help_message
     };
     Tokens ts;

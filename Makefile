@@ -1,10 +1,10 @@
 VERSION = 0.1
 CC			= /usr/bin/clang
-CFLAGS  = -Wimplicit-function-declaration -DVERSION=\"$(VERSION)\"
+CFLAGS  = -Wint-conversion -Wimplicit-function-declaration -DVERSION=\"$(VERSION)\"
 LDFLAGS = -lm
 
-OBJ = primes.o primetest.o primebench.o
-SRC = $(OBJ:%.o=%.c) primes.c
+OBJ = main.o primes.o primebench.o
+SRC = $(OBJ:%.o=%.c) main.c
 HDR = $(OBJ:%.o=%.h)
 
 BIN = sprimes

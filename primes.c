@@ -1,23 +1,57 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "primetest.h"
-#include "primebench.h"
-#include "docopt.c"
+#include "primes.h"
 
-int main(int argc, char *argv[]) {
+void n_primes(unsigned long long start_x, unsigned long long n, char verbose) {
+  // loop for finding n primes from start_x 
+  unsigned long long x = start_x;
+  for(unsigned long long i = start_x; i < n; ) {
+    if(check_num(x) == 0) {
+      x++;
+    }
+    else {
+      // Verbose output
+      if(verbose != 0) {
+        printf("%llu\n", x);
+      }
+      i++;
+      x++;
+    }
+  }
+}
 
-  DocoptArgs args = docopt(argc, argv, /* help */ 1, /* version */ "0.1 ALPHA");
+void find_primes(unsigned long long start_x, unsigned long long end_x, char verbose) {
+  // loop for finding primes from start_x to end_x
+  for(unsigned long long i = start_x; i < end_x; ) {
+    if(check_num(i) == 1) {
+      // Verbose output
+      if(verbose != 0) {
+        printf("%llu\n", i);
+      }
+      i++;
+    }
+  }
+}
 
-    printf("Arguments\n");
-    printf("    s == %s\n", args.startnum);
-    printf("    e == %s\n", args.endnum);
-    printf("Flags\n");
-    printf("    --help == %s\n", args.help ? "true" : "false");
-    printf("    --verbose == %s\n", args.verbose ? "true" : "false");
-    printf("    --version == %s\n", args.version ? "true" : "false");
-    printf("Options\n");
-    printf("    --threads == %s\n", args.threads);
-
-  return 0;
+int check_num(unsigned long long z) {
+  char c = 0;
+  long a = 1;
+  // Durchlaufe solange die Schleife, bis der Divisor a dem Dividenden *z gleich ist
+  while(a <= z) {
+    // Abbruch, wenn bereits mehr als zwei Teiler gefunden sind.
+    if(c > 2)	{
+      return 0;
+    }
+    // Bedingung fuer Primzahl:
+    // I. Zahl, die nur zwei Teiler besitzt.
+    // II. Zahl ist nur durch sich selbst und 1 teilbar.
+    // => Nur Divisionen ohne Rest deuten auf Primzahl hin.
+    else if(z % a == 0) {
+      a++;
+      c++;
+    }
+    else {
+      a++;
+    }
+  }
+  return (c == 2) ? 1 : 0;
 }
 
