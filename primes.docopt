@@ -1,0 +1,13 @@
+Simple Primes.
+
+Usage:
+  sprimes [options] [-s <start>] [-e <end>]
+  sprimes <number>
+
+Options:
+  -s START, --startnum START  Start number [default: 0]
+  -e END, --endnum END        End number [default: 18446744073709551615]
+  -t T, --threads T           Number of threads used to find primes
+  -b, --benchmark             Benchmark prime confirmation
+  -v, --verbose               Enable output of primes found
+  -h, --help                  Show this screen
