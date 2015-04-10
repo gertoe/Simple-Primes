@@ -20,14 +20,14 @@ void n_primes(unsigned long long start_x, unsigned long long n, char verbose) {
 
 void find_primes(unsigned long long start_x, unsigned long long end_x, char verbose) {
   // loop for finding primes from start_x to end_x
-  for(unsigned long long i = start_x; i < end_x; ) {
+  for(unsigned long long i = start_x; i <= end_x; ) {
     if(check_num(i) == 1) {
       // Verbose output
       if(verbose != 0) {
         printf("%llu\n", i);
       }
-      i++;
     }
+    i++;
   }
 }
 

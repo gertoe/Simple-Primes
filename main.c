@@ -25,13 +25,10 @@ int main(int argc, char *argv[]) {
   sscanf(args.endnum,"%llu",&end_val);
   sscanf(args.threads,"%u",&threads);
 
-  step = (unsigned long long) ((end_val - start_val) / ((unsigned long long) threads));
+  // INFORMATION OUTPUT
+  printf("start_val %llu\nend_val %llu\nthreads %u\nverbose %u\n", start_val, end_val, threads, verbose);
 
-  printf("start_val %llu\nend_val %llu\nthreads %u\n", start_val, end_val, threads);
-
-  n_primes(start_val, start_val + step, verbose);
-
-
+  primebench(start_val, end_val, 1, verbose);
 
   return 0;
 }
