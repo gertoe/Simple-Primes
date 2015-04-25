@@ -10,13 +10,13 @@ sprimes -h | --help
 sprimes --version
 
 Options:
--s <start>, --startnum <start> Start number [default: 0]
--e <end>, --endnum <end>       End number [default: 18446744073709551615]
--b, --benchmark                Benchmark prime confirmation
--v, --verbose                  Enable output of primes found
---threads <t>                  Number of threads used to find primes [default: 1]
---version                      Print version
--h, --help                     Show this screen
+-s <start>, --startnum <start>  Start number [default: 0]
+-e <end>, --endnum <end>        End number [default: 18446744073709551615]
+-b, --benchmark                 Benchmark prime confirmation
+-v, --verbose                   Enable output of primes found
+--threads <t>                   Number of threads used to find primes [default: 1]
+--version                       Print version
+-h, --help                      Show this screen
 ```
 Still w.i.p. !
 
