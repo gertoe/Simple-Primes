@@ -1,6 +1,6 @@
 VERSION = 0.1
 CC			= /usr/bin/clang
-CFLAGS  = -Wint-conversion -Wimplicit-function-declaration -DVERSION=\"$(VERSION)\"
+CFLAGS  = -Wall -O3  -Wpedantic -DVERSION=\"$(VERSION)\"
 LDFLAGS = -lm
 
 OBJ = main.o primes.o primebench.o
