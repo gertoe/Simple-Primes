@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include "docopt.c"
 
-int main(int argc, char *argv[]) {
-
+int main(int argc, char *argv[])
+{
   DocoptArgs args = docopt(argc, argv, /* help */ 1, /* version */ "0.1 ALPHA");
 
   printf("Arguments\n");

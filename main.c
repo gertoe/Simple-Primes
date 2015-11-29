@@ -4,7 +4,8 @@
 #include "primebench.h"
 #include "docopt.c"
 
-typedef struct {
+typedef struct
+{
   unsigned long long start,
                      end;
 } numbers;
@@ -17,16 +18,20 @@ int main(int argc, char *argv[]) {
                verbose = args.verbose;
 
   unsigned long long start_val,
-                     end_val,
-                     step;
-
+                     end_val;
 
   sscanf(args.startnum,"%llu",&start_val);
   sscanf(args.endnum,"%llu",&end_val);
   sscanf(args.threads,"%u",&threads);
 
   // INFORMATION OUTPUT
-  printf("start_val %llu\nend_val %llu\nthreads %u\nverbose %u\n", start_val, end_val, threads, verbose);
+  printf(
+      "start_val %llu\nend_val %llu\nthreads %u\nverbose %u\n", \
+      start_val, \
+      end_val, \
+      threads, \
+      verbose \
+      );
 
   primebench(start_val, end_val, 1, verbose);
 

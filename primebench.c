@@ -2,7 +2,8 @@
 #include "primes.h"
 
 
-void primebench(unsigned long long start_x, unsigned int n_nums, int thread, char verbose) {
+void primebench(unsigned long long start_x, unsigned int n_nums, int thread, char verbose)
+{
   clock_t start_clk = clock();
   find_primes(start_x, n_nums, verbose);
   clock_t end_clk = clock();

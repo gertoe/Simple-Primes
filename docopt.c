@@ -9,7 +9,6 @@
 #include <string.h>
 #endif
 
-
 typedef struct {
     /* options without arguments */
     int benchmark;
