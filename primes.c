@@ -1,4 +1,5 @@
 #include "primes.h"
+#include "math.h"
 
 void n_primes(unsigned long long start_x, unsigned long long n, char verbose)
 {
@@ -43,7 +44,7 @@ void find_primes(unsigned long long start_x, unsigned long long end_x, char verb
 int check_num(unsigned long long z)
 {
   char c = 0;
-  long a = 1;
+  unsigned long long a = 1;
   // Durchlaufe solange die Schleife, bis der Divisor a dem Dividenden *z gleich ist
   while(a <= z)
   {
@@ -53,7 +54,7 @@ int check_num(unsigned long long z)
       return 0;
     }
     // Bedingung fuer Primzahl:
-    // I. Zahl, die nur zwei Teiler besitzt.
+    // I. Zahl, die genau zwei Teiler besitzt.
     // II. Zahl ist nur durch sich selbst und 1 teilbar.
     // => Nur Divisionen ohne Rest deuten auf Primzahl hin.
     else if(z % a == 0)

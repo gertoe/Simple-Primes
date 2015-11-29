@@ -1,7 +1,6 @@
 #include "primebench.h"
 #include "primes.h"
 
-
 void primebench(unsigned long long start_x, unsigned int n_nums, int thread, char verbose)
 {
   clock_t start_clk = clock();
