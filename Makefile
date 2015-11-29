@@ -1,5 +1,5 @@
 VERSION = 0.1
-CC			= /usr/bin/clang
+CC			= clang
 CFLAGS  = -Wall -O3  -Wpedantic -DVERSION=\"$(VERSION)\"
 LDFLAGS = -lm
 
@@ -13,4 +13,5 @@ prog: $(OBJ)
 	$(CC) $(CFLAGS) -o $(BIN) $(OBJ) $(LDFLAGS)
 
 clean:
-	rm $(BIN) $(OBJ)
+	rm -rfv $(BIN) $(OBJ)
+
