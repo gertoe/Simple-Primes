@@ -43,20 +43,15 @@ void find_primes(unsigned long long start_x, unsigned long long end_x, char verb
 
 inline int check_num(unsigned long long z)
 {
-  // use for optimized variant (search up to square root of number)
   unsigned long long sz = (unsigned long long)sqrtl(z);
 
   char c = 0;
   unsigned long long a = 1;
-  // Durchlaufe solange die Schleife, bis der Divisor a dem Dividenden *z gleich ist (optimiert bis Wurzel von z)
-  //
-  // simple variant: z
-  while(a <= sz)
+  // Durchlaufe solange die Schleife, bis der Divisor a dem Dividenden *z gleich ist
+  while(a <= z)
   {
     // Abbruch, wenn bereits mehr als zwei Teiler gefunden sind.
-    // naive: c > 2
-    // optimiert: c > 1
-    if(c > 1 || z == 1)
+    if(c > 2)
     {
       return 0;
     }
@@ -74,8 +69,6 @@ inline int check_num(unsigned long long z)
       ++a;
     }
   }
-  // naive c == 2
-  // optimiert c == 1
-  return (c == 1) ? 1 : 0;
+  return (c == 2) ? 1 : 0;
 }
 

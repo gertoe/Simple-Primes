@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "primes.h"
+
 #include "primebench.h"
 #include "docopt.c"
 
