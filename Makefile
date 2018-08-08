@@ -1,6 +1,6 @@
-VERSION = 0.1
+VERSION = 0.2
 CC			= clang
-CFLAGS  = -Wall -O3  -Wpedantic -DVERSION=\"$(VERSION)\"
+CFLAGS  = -Wall -O3  -march=native -Wpedantic -DVERSION=\"$(VERSION)\"
 LDFLAGS = -lm
 
 OBJ = main.o primes.o primebench.o
